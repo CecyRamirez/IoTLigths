@@ -4,7 +4,7 @@ const mqtt = require('mqtt');
 
 
 const dbUrl = 'mongodb+srv://cgomez33:jPwtjOdeGJE5vLMl@cluster0.uooqksx.mongodb.net/Lucecitas';
-const wss = new WebSocket.Server({port:8080});        
+const wss = new WebSocket.Server({port:443});        
         
 
 mongoose.connect(dbUrl, { useNewUrlParser: true, useUnifiedTopology: true })
@@ -80,7 +80,7 @@ mongoose.connect(dbUrl, { useNewUrlParser: true, useUnifiedTopology: true })
         });
       });
   
-      console.log('Servidor web con websockets iniciado en el puerto 8080');
+      console.log('Servidor web con websockets iniciado en el puerto 443');
     })
     .catch((error) => {
       console.error('Error al conectar a la base de datos:', error);
